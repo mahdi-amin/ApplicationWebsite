@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
         fragmentAdd = new FragmentAdd();
         fragmentCategory = new FragmentCategory();
         fragmentHome = new FragmentHome();
-
         bottomNavigationView.setSelectedItemId(R.id.item_Home);
         setFragment(fragmentHome);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
