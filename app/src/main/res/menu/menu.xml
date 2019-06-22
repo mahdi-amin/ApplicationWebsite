@@ -13,4 +13,8 @@
         android:icon="@drawable/ic_home_black_24dp"
         android:title="خانه"
         android:id="@+id/item_Home" />
+    <item
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="پاکت من"
+        android:id="@+id/item_Me" />
 </menu>

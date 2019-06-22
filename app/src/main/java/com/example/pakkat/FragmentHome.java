@@ -37,13 +37,18 @@ public class FragmentHome extends Fragment {
     }
 
     String url = "https://www.91-img.com/pictures/128557-v5-honor-9n-mobile-phone-large-1.jpg";
-
+    String txt = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaksjhgsdkjfsljdafukjisadfjhagildsgfhilkjsdgfksgvdkjfsaldf" +
+            "fsdhjgfskdgfhdsfkbsljdfbksjdbvflksbvadflkjhvbasldjfvhlkasvdfkjhasvdfsavlkdf" +
+            "sdfjsgidgfiaokygfvilhjkasvldfkvaslkjdfvlksjbdfkaldkfvkalhsjbdf" +
+            "saodl;kjfbvoolhisagdvfikjhvbasdhkjfvkhasjdfvhlkjasvdfkjvakjdfvjhkasvfdlkjvasdf" +
+            "asdfol;bjvasudkgfvkjhsavdfkjasvbdhlkfjvkjsadfvjsa,hdkjfvhlkjsadf" +
+            "sadlkjfgukhsjdgfvkhljasvdkjfhvkjhsadvfhkjsavdf";
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         listHome = new ArrayList<>();
-        listHome.add(new ModelHome("گوشی موبایل","تهران","1395","2 میلیون ", url, "mobile","jhaskfdjavjfgvaksvdh"));
+        listHome.add(new ModelHome("گوشی موبایل","تهران","1395","2 میلیون ", url, "mobile",txt));
         listHome.add(new ModelHome("ماشین","آبادان","1803","۸۰ میلیون ", url,"car","ajsfdvhasvdkjvasd"));
         listHome.add(new ModelHome("گوشی خانه","تبریز","1356","100 هزار", url, "mobile","aljsgdkajbdskhشستایsddsf"));
         listHome.add(new ModelHome("یخچال","تهران","1395","2 میلیون ", url, "abc","khfdsobsfbskfd"));

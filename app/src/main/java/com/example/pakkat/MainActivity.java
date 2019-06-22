@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     FragmentCategory fragmentCategory;
     FragmentHome fragmentHome;
     FragmentAdd fragmentAdd;
+    FragmentMe fragmentMe;
 
 
     @Override
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         fragmentAdd = new FragmentAdd();
         fragmentCategory = new FragmentCategory();
         fragmentHome = new FragmentHome();
+        fragmentMe = new FragmentMe();
         bottomNavigationView.setSelectedItemId(R.id.item_Home);
 
         setFragment(fragmentHome);
@@ -45,6 +47,9 @@ public class MainActivity extends AppCompatActivity {
                         return true;
                     case R.id.item_Home:
                         setFragment(fragmentHome);
+                        return true;
+                    case R.id.item_Me:
+                        setFragment(fragmentMe);
                         return true;
 
                 }

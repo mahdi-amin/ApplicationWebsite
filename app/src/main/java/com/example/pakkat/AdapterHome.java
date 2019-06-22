@@ -2,11 +2,13 @@ package com.example.pakkat;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -40,7 +42,8 @@ public class AdapterHome extends RecyclerView.Adapter<AdapterHome.MyViewHolder> 
 
         dialog = new Dialog(mContext);
         dialog.setContentView(R.layout.detail_home);
-        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT,
+                WindowManager.LayoutParams.MATCH_PARENT);
 
         viewHolder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
