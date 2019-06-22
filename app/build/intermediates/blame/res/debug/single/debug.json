@@ -628,6 +628,10 @@
         "source": "/home/amir/.gradle/caches/transforms-2/files-2.1/c7856f61f9b270025c3a9b965eb98700/res/drawable-v21/avd_hide_password.xml"
     },
     {
+        "merged": "/home/amir/StudioProjects/pakkat/app/build/intermediates/res/merged/debug/layout_fragment_me.xml.flat",
+        "source": "/home/amir/StudioProjects/pakkat/app/src/main/res/layout/fragment_me.xml"
+    },
+    {
         "merged": "/home/amir/StudioProjects/pakkat/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
         "source": "/home/amir/.gradle/caches/transforms-2/files-2.1/78f250a6b96da9f85852327d9b522c3f/res/drawable-xhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png"
     },
