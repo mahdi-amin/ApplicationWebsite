@@ -5,7 +5,8 @@
     android:layout_height="wrap_content"
     android:padding="10dp"
     android:layout_marginBottom="0.5dp"
-    android:background="#FDFDFD">
+    android:background="#FDFDFD"
+    android:id="@+id/item_Homely">
 
 
     <androidx.appcompat.widget.AppCompatImageView

@@ -1,10 +1,14 @@
 package com.example.pakkat;
 
+import android.app.Dialog;
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -18,6 +22,7 @@ public class AdapterHome extends RecyclerView.Adapter<AdapterHome.MyViewHolder> 
 
     Context mContext;
     List<ModelHome> mHome;
+    Dialog dialog;
 
     public AdapterHome(Context mContext, List<ModelHome> mHome) {
 
@@ -31,7 +36,35 @@ public class AdapterHome extends RecyclerView.Adapter<AdapterHome.MyViewHolder> 
 
         //set View For ViewHolder
         View view = LayoutInflater.from(mContext).inflate(R.layout.item_home, parent,false);
-        MyViewHolder viewHolder = new MyViewHolder(view);
+        final MyViewHolder viewHolder = new MyViewHolder(view);
+
+        dialog = new Dialog(mContext);
+        dialog.setContentView(R.layout.detail_home);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+        viewHolder.linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                TextView detailTitle = dialog.findViewById(R.id.detail_title);
+                TextView detailTime = dialog.findViewById(R.id.detail_time);
+                TextView detailCategory = dialog.findViewById(R.id.detail_category);
+                TextView detailLoc = dialog.findViewById(R.id.detail_category);
+                TextView detailPrice = dialog.findViewById(R.id.detail_price);
+                TextView detailTxt = dialog.findViewById(R.id.detail_txt);
+                ImageView detailImg = dialog.findViewById(R.id.detail_img);
+
+                detailTitle.setText(mHome.get(viewHolder.getAdapterPosition()).getTitle());
+                detailTime.setText(mHome.get(viewHolder.getAdapterPosition()).getDate());
+                detailCategory.setText(mHome.get(viewHolder.getAdapterPosition()).getCategory());
+                detailLoc.setText(mHome.get(viewHolder.getAdapterPosition()).getLoc());
+                detailPrice.setText(mHome.get(viewHolder.getAdapterPosition()).getPrice());
+                detailTxt.setText(mHome.get(viewHolder.getAdapterPosition()).getTxt());
+                Picasso.get().load(mHome.get(viewHolder.getAdapterPosition()).getPic()).into(detailImg);
+
+                dialog.show();
+            }
+        });
 
         return viewHolder;
     }
@@ -56,6 +89,7 @@ public class AdapterHome extends RecyclerView.Adapter<AdapterHome.MyViewHolder> 
 
         private TextView titleTX, locTX, priceTX, dateTX;
         private ImageView iconIMG;
+        private LinearLayout linearLayout;
 
         public MyViewHolder(@NonNull View view) {
             super(view);
@@ -65,6 +99,7 @@ public class AdapterHome extends RecyclerView.Adapter<AdapterHome.MyViewHolder> 
             priceTX = view.findViewById(R.id.Price_Home);
             dateTX = view.findViewById(R.id.Date_Home);
             iconIMG = view.findViewById(R.id.Icon_Home);
+            linearLayout = view.findViewById(R.id.item_Homely);
         }
     }
 }

@@ -1068,6 +1068,7 @@ id add
 id alertTitle
 id all
 id always
+id appBarly
 id async
 id auto
 id barrier
@@ -1098,6 +1099,14 @@ id design_menu_item_action_area
 id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
+id detail_category
+id detail_homely
+id detail_img
+id detail_loc
+id detail_price
+id detail_time
+id detail_title
+id detail_txt
 id dimensions
 id direct
 id disableHome
@@ -1128,6 +1137,7 @@ id info
 id invisible
 id italic
 id item_Home
+id item_Homely
 id item_add
 id item_list
 id item_touch_helper_previous_elevation
@@ -1292,6 +1302,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout app_bar
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -1306,6 +1317,7 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
+layout detail_home
 layout fragment_add
 layout fragment_category
 layout fragment_home

@@ -43,11 +43,11 @@ public class FragmentHome extends Fragment {
         super.onCreate(savedInstanceState);
 
         listHome = new ArrayList<>();
-        listHome.add(new ModelHome("گوشی موبایل","تهران","1395","2 میلیون ", url));
-        listHome.add(new ModelHome("ماشین","آبادان","1803","۸۰ میلیون ", url));
-        listHome.add(new ModelHome("گوشی خانه","تبریز","1356","100 هزار", url));
-        listHome.add(new ModelHome("یخچال","تهران","1395","2 میلیون ", url));
-        listHome.add(new ModelHome("گاز","مکه","2200","2 00 ", url));
-        listHome.add(new ModelHome("گوشی موبایل","تهران","1395","33 میلیون ", url));
+        listHome.add(new ModelHome("گوشی موبایل","تهران","1395","2 میلیون ", url, "mobile","jhaskfdjavjfgvaksvdh"));
+        listHome.add(new ModelHome("ماشین","آبادان","1803","۸۰ میلیون ", url,"car","ajsfdvhasvdkjvasd"));
+        listHome.add(new ModelHome("گوشی خانه","تبریز","1356","100 هزار", url, "mobile","aljsgdkajbdskhشستایsddsf"));
+        listHome.add(new ModelHome("یخچال","تهران","1395","2 میلیون ", url, "abc","khfdsobsfbskfd"));
+        listHome.add(new ModelHome("گاز","مکه","2200","2 00 ", url, "ads","khbasdahs"));
+        listHome.add(new ModelHome("گوشی موبایل","تهران","1395","33 میلیون ", url, "mobile","ikavfobajgfvkasdkiuasd"));
     }
 }

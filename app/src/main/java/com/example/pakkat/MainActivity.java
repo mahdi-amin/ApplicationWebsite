@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     FragmentHome fragmentHome;
     FragmentAdd fragmentAdd;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         fragmentCategory = new FragmentCategory();
         fragmentHome = new FragmentHome();
         bottomNavigationView.setSelectedItemId(R.id.item_Home);
+
         setFragment(fragmentHome);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
