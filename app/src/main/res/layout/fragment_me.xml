@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp">
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="250dp"
@@ -20,7 +21,7 @@
         android:textSize="15sp"
         android:gravity="right|center"
         android:background="@android:color/transparent"/>
-    <view
+    <View
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
         android:background="#B1B1B1"/>
@@ -34,7 +35,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <androidx.appcompat.widget.AppCompatButton
+        <Button
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_gravity="center|bottom"
@@ -42,7 +43,4 @@
             android:textColor="#fff"
             android:text="خروج از حساب "/>
     </LinearLayout>
-
-
-
 </LinearLayout>

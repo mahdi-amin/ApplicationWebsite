@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/amir/StudioProjects/pakkat/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pt-rPT/values-pt-rPT.xml",
+            "outputFile": "/home/amirhossein/AndroidStudioProjects/pakkat/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pt-rPT/values-pt-rPT.xml",
             "map": [
                 {
-                    "source": "/home/amir/.gradle/caches/transforms-2/files-2.1/78f250a6b96da9f85852327d9b522c3f/res/values-pt-rPT/values-pt-rPT.xml",
+                    "source": "/home/amirhossein/.gradle/caches/transforms-2/files-2.1/f46df5ec48d48472ac605be3db9144b5/res/values-pt-rPT/values-pt-rPT.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/home/amir/.gradle/caches/transforms-2/files-2.1/3397b965e0f1a0ed4c51d28371d36d27/res/values-pt-rPT/values-pt-rPT.xml",
+                    "source": "/home/amirhossein/.gradle/caches/transforms-2/files-2.1/b47c8811188d7126ffe8ff9c8c5e15dc/res/values-pt-rPT/values-pt-rPT.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
