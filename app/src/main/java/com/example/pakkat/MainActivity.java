@@ -1,5 +1,6 @@
 package com.example.pakkat;
 
+import androidx.annotation.FloatRange;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -7,6 +8,8 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.FrameLayout;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -19,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
     FragmentHome fragmentHome;
     FragmentAdd fragmentAdd;
     FragmentMe fragmentMe;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

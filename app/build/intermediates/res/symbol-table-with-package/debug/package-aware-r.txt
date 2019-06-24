@@ -1050,6 +1050,7 @@ drawable ic_list_black_24dp
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_refresh_black_24dp
 drawable ic_search_black_24dp
 drawable ic_settings_black_24dp
 drawable ic_subject_black_24dp
@@ -1149,6 +1150,7 @@ id blocking
 id bottom
 id bottomNav
 id buttonPanel
+id button_reload
 id center
 id center_horizontal
 id center_vertical

@@ -1,5 +1,6 @@
 package com.example.pakkat;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -29,6 +31,7 @@ public class FragmentHome extends Fragment {
     ArrayList<ModelHome> listHome = new ArrayList<>();
     Context context;
     AdapterHome HAdapter;
+    Button button;
 
     public FragmentHome() {
 
@@ -51,20 +54,34 @@ public class FragmentHome extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        button = getActivity().findViewById(R.id.button_reload);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new getJson(getActivity()).execute();
+            }
+        });
+
         new getJson(getActivity()).execute();
     }
 
     public class getJson extends AsyncTask<Void,Void,String>{
 
-
+        ProgressDialog progressDialog = new ProgressDialog(getActivity());
         Context context;
         public getJson(Context context) {
             this.context = context;
         }
 
+
+
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
+
+            progressDialog.setMessage("در حال بروزرسانی...");
+            progressDialog.setCancelable(false);
+            progressDialog.show();
         }
 
         @Override
@@ -76,6 +93,11 @@ public class FragmentHome extends Fragment {
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
+
+            if (progressDialog.isShowing()){
+                progressDialog.dismiss();
+            }
+
             try {
                 JSONObject object = new JSONObject(s);
 

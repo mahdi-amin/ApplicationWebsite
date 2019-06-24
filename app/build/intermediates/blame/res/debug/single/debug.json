@@ -1736,6 +1736,10 @@
         "source": "/home/amirhossein/.gradle/caches/transforms-2/files-2.1/ca875253c80611626113e5044bad848b/res/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_015.png"
     },
     {
+        "merged": "/home/amirhossein/AndroidStudioProjects/pakkat/app/build/intermediates/res/merged/debug/drawable_ic_refresh_black_24dp.xml.flat",
+        "source": "/home/amirhossein/AndroidStudioProjects/pakkat/app/src/main/res/drawable/ic_refresh_black_24dp.xml"
+    },
+    {
         "merged": "/home/amirhossein/AndroidStudioProjects/pakkat/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
         "source": "/home/amirhossein/.gradle/caches/transforms-2/files-2.1/ca875253c80611626113e5044bad848b/res/drawable-hdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png"
     },
