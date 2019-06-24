@@ -3,6 +3,7 @@ package com.example.pakkat;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,8 +27,8 @@ public class FragmentHome extends Fragment {
     View view;
     private RecyclerView recyclerView;
     ArrayList<ModelHome> listHome = new ArrayList<>();
-    AdapterHome adapterHome;
     Context context;
+    AdapterHome HAdapter;
 
     public FragmentHome() {
 
@@ -39,7 +40,7 @@ public class FragmentHome extends Fragment {
 
         view = inflater.inflate(R.layout.fragment_home, container,false);
         recyclerView = view.findViewById(R.id.HomeRC_id);
-        AdapterHome HAdapter = new AdapterHome(getContext(), listHome);
+        HAdapter = new AdapterHome(getContext(), listHome);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(HAdapter);
 
@@ -54,6 +55,7 @@ public class FragmentHome extends Fragment {
     }
 
     public class getJson extends AsyncTask<Void,Void,String>{
+
 
         Context context;
         public getJson(Context context) {
@@ -93,9 +95,11 @@ public class FragmentHome extends Fragment {
                     listHome.add(new ModelHome(title,loc,date,price,img,category,description,phone));
 
                 }
-                //adapterHome.notifyDataSetChanged();
+                HAdapter.notifyDataSetChanged();
             }catch (JSONException e){
                 Toast.makeText(context, e.getMessage(),Toast.LENGTH_SHORT).show();
+            }catch (Exception e){
+                Log.e("log",e.getMessage());
             }
         }
     }
