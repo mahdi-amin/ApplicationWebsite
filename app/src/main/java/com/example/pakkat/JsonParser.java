@@ -17,6 +17,7 @@ public class JsonParser {
     public static String GetJson (String link){
 
         try{
+
             URL url = new URL(link);
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.setRequestMethod("GET");

@@ -80,7 +80,11 @@ public class FragmentHome extends Fragment {
                 JSONObject object = new JSONObject(s);
 
                 JSONArray pakkat = object.getJSONArray("pakkat");
+                if(listHome!=null && listHome.size()>0){
+                    listHome.clear();
+                }
                 for (int i = 0; i<pakkat.length(); i++){
+
                     JSONObject pakkatobj = pakkat.getJSONObject(i);
 
                     String title = pakkatobj.getString("title");
@@ -93,9 +97,10 @@ public class FragmentHome extends Fragment {
                     String phone = pakkatobj.getString("phone");
 
                     listHome.add(new ModelHome(title,loc,date,price,img,category,description,phone));
-
-                }
+                }AdapterHome HA;
                 HAdapter.notifyDataSetChanged();
+
+
             }catch (JSONException e){
                 Toast.makeText(context, e.getMessage(),Toast.LENGTH_SHORT).show();
             }catch (Exception e){
