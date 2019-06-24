@@ -49,7 +49,7 @@ public class AdapterHome extends RecyclerView.Adapter<AdapterHome.MyViewHolder> 
                 TextView detailTitle = dialog.findViewById(R.id.detail_title);
                 TextView detailTime = dialog.findViewById(R.id.detail_time);
                 TextView detailCategory = dialog.findViewById(R.id.detail_category);
-                TextView detailLoc = dialog.findViewById(R.id.detail_category);
+                TextView detailLoc = dialog.findViewById(R.id.detail_loc);
                 TextView detailPrice = dialog.findViewById(R.id.detail_price);
                 TextView detaildesc = dialog.findViewById(R.id.detail_description);
                 ImageView detailImg = dialog.findViewById(R.id.detail_img);
@@ -102,4 +102,5 @@ public class AdapterHome extends RecyclerView.Adapter<AdapterHome.MyViewHolder> 
             linearLayout = view.findViewById(R.id.item_Homely);
         }
     }
+
 }

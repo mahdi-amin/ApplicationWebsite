@@ -119,7 +119,7 @@ public class FragmentHome extends Fragment {
                     String phone = pakkatobj.getString("phone");
 
                     listHome.add(new ModelHome(title,loc,date,price,img,category,description,phone));
-                }AdapterHome HA;
+                }
                 HAdapter.notifyDataSetChanged();
 
 
