@@ -8,7 +8,8 @@ public class ModelHome {
     private String price;
     private String Pic;
     private String Category;
-    private String TXT;
+    private String description;
+    private String phone;
 
     //Constructor null
     public ModelHome() {
@@ -16,14 +17,15 @@ public class ModelHome {
     }
 
     //Constructor
-    public ModelHome(String title, String loc, String date, String price, String pic, String category, String TXT) {
+    public ModelHome(String title, String loc, String date, String price, String pic, String category, String description, String phone) {
         this.Title = title;
         this.Loc = loc;
         this.Date = date;
         this.price = price;
         this.Pic = pic;
         this.Category = category;
-        this.TXT = TXT;
+        this.description = description;
+        this.phone = phone;
     }
 
     //getter and setter
@@ -77,12 +79,22 @@ public class ModelHome {
     }
 
     public String getTxt() {
-        return TXT;
+        return description;
     }
 
-    public void setTXT(String txt) {
-        TXT = txt;
+    public void setDescription(String description) {
+        description = description;
     }
 
+    public String getDescription() {
+        return description;
+    }
 
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
 }

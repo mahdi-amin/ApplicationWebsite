@@ -2,9 +2,6 @@ package com.example.pakkat;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,7 +51,7 @@ public class AdapterHome extends RecyclerView.Adapter<AdapterHome.MyViewHolder> 
                 TextView detailCategory = dialog.findViewById(R.id.detail_category);
                 TextView detailLoc = dialog.findViewById(R.id.detail_category);
                 TextView detailPrice = dialog.findViewById(R.id.detail_price);
-                TextView detailTxt = dialog.findViewById(R.id.detail_txt);
+                TextView detaildesc = dialog.findViewById(R.id.detail_description);
                 ImageView detailImg = dialog.findViewById(R.id.detail_img);
 
                 detailTitle.setText(mHome.get(viewHolder.getAdapterPosition()).getTitle());
@@ -62,7 +59,7 @@ public class AdapterHome extends RecyclerView.Adapter<AdapterHome.MyViewHolder> 
                 detailCategory.setText(mHome.get(viewHolder.getAdapterPosition()).getCategory());
                 detailLoc.setText(mHome.get(viewHolder.getAdapterPosition()).getLoc());
                 detailPrice.setText(mHome.get(viewHolder.getAdapterPosition()).getPrice());
-                detailTxt.setText(mHome.get(viewHolder.getAdapterPosition()).getTxt());
+                detaildesc.setText(mHome.get(viewHolder.getAdapterPosition()).getTxt());
                 Picasso.get().load(mHome.get(viewHolder.getAdapterPosition()).getPic()).into(detailImg);
 
                 dialog.show();
