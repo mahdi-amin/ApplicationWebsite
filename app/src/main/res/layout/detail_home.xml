@@ -1,12 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff">
+    android:background="#fff"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:id="@+id/detail_id">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:id="@+id/appBarly">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="right"
+            android:paddingRight="15dp"
+            android:weightSum="2">
+            <Button
+                android:layout_width="10dp"
+                android:layout_height="50dp"
+                android:background="@drawable/ic_chevron_left_black_24dp"
+                android:id="@+id/button_back"
+                android:layout_gravity="left|center"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="0.2"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:text="عنوان"
+                android:textSize="30sp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1.8"
+                android:id="@+id/title_bar"/>
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -169,20 +206,18 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="5dp"
                 android:id="@+id/detail_description"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:text="تماس"
-                android:background="@color/colorPrimary"
-                android:layout_marginRight="30dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                android:textColor="#FFF"
-                android:fitsSystemWindows="true"
-                />
         </LinearLayout>
     </ScrollView>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="تماس"
+        android:background="@color/colorPrimary"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="#FFF"
+        />
 
-</RelativeLayout>
+</LinearLayout>

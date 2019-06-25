@@ -29,7 +29,6 @@ public class FragmentHome extends Fragment {
     View view;
     private RecyclerView recyclerView;
     ArrayList<ModelHome> listHome = new ArrayList<>();
-    Context context;
     AdapterHome HAdapter;
     Button button;
 
@@ -54,7 +53,9 @@ public class FragmentHome extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        button = getActivity().findViewById(R.id.button_reload);
+
+
+        button = view.findViewById(R.id.button_reload);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

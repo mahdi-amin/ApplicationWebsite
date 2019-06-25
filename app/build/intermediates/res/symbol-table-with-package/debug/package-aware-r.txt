@@ -1072,7 +1072,6 @@ drawable notify_panel_notification_icon_bg
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
-id AddRC_id
 id CTRL
 id CategoryRC_id
 id Date_Home
@@ -1150,6 +1149,7 @@ id blocking
 id bottom
 id bottomNav
 id buttonPanel
+id button_back
 id button_reload
 id center
 id center_horizontal
@@ -1177,6 +1177,7 @@ id design_navigation_view
 id detail_category
 id detail_description
 id detail_homely
+id detail_id
 id detail_img
 id detail_loc
 id detail_price
@@ -1200,7 +1201,6 @@ id filled
 id fixed
 id forever
 id ghost_view
-id glide_custom_view_target_tag
 id gone
 id group_divider
 id groups
@@ -1320,6 +1320,7 @@ id time
 id title
 id titleDividerNoCustom
 id title_Home
+id title_bar
 id title_category
 id title_template
 id top

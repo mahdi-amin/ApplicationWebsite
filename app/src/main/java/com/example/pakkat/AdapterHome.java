@@ -11,6 +11,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
@@ -22,6 +24,7 @@ public class AdapterHome extends RecyclerView.Adapter<AdapterHome.MyViewHolder> 
     Context mContext;
     List<ModelHome> mHome;
     Dialog dialog;
+    detailHome detailHome = new detailHome();
 
     public AdapterHome(Context mContext, List<ModelHome> mHome) {
 
@@ -52,9 +55,11 @@ public class AdapterHome extends RecyclerView.Adapter<AdapterHome.MyViewHolder> 
                 TextView detailLoc = dialog.findViewById(R.id.detail_loc);
                 TextView detailPrice = dialog.findViewById(R.id.detail_price);
                 TextView detaildesc = dialog.findViewById(R.id.detail_description);
+                TextView titlebar = dialog.findViewById(R.id.title_bar);
                 ImageView detailImg = dialog.findViewById(R.id.detail_img);
 
                 detailTitle.setText(mHome.get(viewHolder.getAdapterPosition()).getTitle());
+                titlebar.setText(mHome.get(viewHolder.getAdapterPosition()).getTitle());
                 detailTime.setText(mHome.get(viewHolder.getAdapterPosition()).getDate());
                 detailCategory.setText(mHome.get(viewHolder.getAdapterPosition()).getCategory());
                 detailLoc.setText(mHome.get(viewHolder.getAdapterPosition()).getLoc());
@@ -62,9 +67,17 @@ public class AdapterHome extends RecyclerView.Adapter<AdapterHome.MyViewHolder> 
                 detaildesc.setText(mHome.get(viewHolder.getAdapterPosition()).getTxt());
                 Picasso.get().load(mHome.get(viewHolder.getAdapterPosition()).getPic()).into(detailImg);
 
-                dialog.show();
+                //dialog.show();
+
+
+
+                AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.Framely ,detailHome)
+                        .addToBackStack(null).commit();
             }
         });
+
+
 
         return viewHolder;
     }

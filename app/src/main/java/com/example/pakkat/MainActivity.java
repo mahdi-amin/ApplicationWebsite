@@ -1,6 +1,5 @@
 package com.example.pakkat;
 
-import androidx.annotation.FloatRange;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -22,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     FragmentHome fragmentHome;
     FragmentAdd fragmentAdd;
     FragmentMe fragmentMe;
+    detailHome detailHome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         fragmentCategory = new FragmentCategory();
         fragmentHome = new FragmentHome();
         fragmentMe = new FragmentMe();
+        detailHome = new detailHome();
         bottomNavigationView.setSelectedItemId(R.id.item_Home);
 
         setFragment(fragmentHome);
@@ -45,13 +46,14 @@ public class MainActivity extends AppCompatActivity {
                         setFragment(fragmentCategory);
                         return true;
                     case R.id.item_add:
-                        setFragment(fragmentAdd);
+                        setFragment(detailHome);
                         return true;
                     case R.id.item_Home:
                         setFragment(fragmentHome);
                         return true;
                     case R.id.item_Me:
                         setFragment(fragmentMe);
+
                         return true;
 
                 }
@@ -59,8 +61,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
     }
-    private void setFragment(Fragment fragment){
+    public void setFragment(Fragment fragment){
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.Framely, fragment);
         fragmentTransaction.commit();
