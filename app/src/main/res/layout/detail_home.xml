@@ -20,14 +20,6 @@
             android:gravity="right"
             android:paddingRight="15dp"
             android:weightSum="2">
-            <Button
-                android:layout_width="10dp"
-                android:layout_height="50dp"
-                android:background="@drawable/ic_chevron_left_black_24dp"
-                android:id="@+id/button_back"
-                android:layout_gravity="left|center"
-                android:layout_marginLeft="5dp"
-                android:layout_weight="0.2"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

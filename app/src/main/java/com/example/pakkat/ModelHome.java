@@ -78,10 +78,6 @@ public class ModelHome {
         Category = category;
     }
 
-    public String getTxt() {
-        return description;
-    }
-
     public void setDescription(String description) {
         description = description;
     }

@@ -1149,7 +1149,6 @@ id blocking
 id bottom
 id bottomNav
 id buttonPanel
-id button_back
 id button_reload
 id center
 id center_horizontal

@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
         fragmentCategory = new FragmentCategory();
         fragmentHome = new FragmentHome();
         fragmentMe = new FragmentMe();
-        FragmentDetail = new FragmentDetail();
         bottomNavigationView.setSelectedItemId(R.id.item_Home);
 
         setFragment(fragmentHome);
@@ -44,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                         setFragment(fragmentCategory);
                         return true;
                     case R.id.item_add:
-                        setFragment(FragmentDetail);
+                        setFragment(fragmentAdd);
                         return true;
                     case R.id.item_Home:
                         setFragment(fragmentHome);

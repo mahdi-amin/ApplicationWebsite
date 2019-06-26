@@ -1,6 +1,5 @@
 package com.example.pakkat;
 
-import android.app.Dialog;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,7 +20,6 @@ public class AdapterHome extends RecyclerView.Adapter<AdapterHome.MyViewHolder> 
 
     Context mContext;
     List<ModelHome> mHome;
-    Dialog dialog;
     FragmentDetail FragmentDetail = new FragmentDetail();
 
     public AdapterHome(Context mContext, List<ModelHome> mHome) {
@@ -40,34 +38,24 @@ public class AdapterHome extends RecyclerView.Adapter<AdapterHome.MyViewHolder> 
 
         viewHolder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
 
-                view = LayoutInflater.from(mContext).inflate(R.layout.detail_home, parent,false);
-                TextView detailTitle = view.findViewById(R.id.detail_title);
-                TextView detailTime = view.findViewById(R.id.detail_time);
-                TextView detailCategory = view.findViewById(R.id.detail_category);
-                TextView detailLoc = view.findViewById(R.id.detail_loc);
-                TextView detailPrice = view.findViewById(R.id.detail_price);
-                TextView detaildesc = view.findViewById(R.id.detail_description);
-                TextView titlebar = view.findViewById(R.id.title_bar);
-                ImageView detailImg = view.findViewById(R.id.detail_img);
+                String[] data = new String[7];
 
-                detailTitle.setText(mHome.get(viewHolder.getAdapterPosition()).getTitle());
-                titlebar.setText(mHome.get(viewHolder.getAdapterPosition()).getTitle());
-                detailTime.setText(mHome.get(viewHolder.getAdapterPosition()).getDate());
-                detailCategory.setText(mHome.get(viewHolder.getAdapterPosition()).getCategory());
-                detailLoc.setText(mHome.get(viewHolder.getAdapterPosition()).getLoc());
-                detailPrice.setText(mHome.get(viewHolder.getAdapterPosition()).getPrice());
-                detaildesc.setText(mHome.get(viewHolder.getAdapterPosition()).getTxt());
-                Picasso.get().load(mHome.get(viewHolder.getAdapterPosition()).getPic()).into(detailImg);
+                data[0] = mHome.get(viewHolder.getAdapterPosition()).getTitle();
+                data[1] = mHome.get(viewHolder.getAdapterPosition()).getDate();
+                data[2] = mHome.get(viewHolder.getAdapterPosition()).getCategory();
+                data[3] = mHome.get(viewHolder.getAdapterPosition()).getLoc();
+                data[4] = mHome.get(viewHolder.getAdapterPosition()).getPrice();
+                data[5] = mHome.get(viewHolder.getAdapterPosition()).getDescription();
+                data[6] = mHome.get(viewHolder.getAdapterPosition()).getPic();
 
-                AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                FragmentDetail.setDetail(data);
+                AppCompatActivity activity = (AppCompatActivity) v.getContext();
                 activity.getSupportFragmentManager().beginTransaction().replace(R.id.Framely , FragmentDetail)
                         .addToBackStack(null).commit();
             }
         });
-
-
 
         return viewHolder;
     }
@@ -75,11 +63,13 @@ public class AdapterHome extends RecyclerView.Adapter<AdapterHome.MyViewHolder> 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
+
         holder.titleTX.setText(mHome.get(position).getTitle());
         holder.locTX.setText(mHome.get(position).getLoc());
         holder.dateTX.setText(mHome.get(position).getDate());
         holder.priceTX.setText(mHome.get(position).getPrice());
         Picasso.get().load(mHome.get(position).getPic()).into(holder.iconIMG);
+
     }
 
     @Override
