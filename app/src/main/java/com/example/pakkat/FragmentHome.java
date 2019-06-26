@@ -20,10 +20,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.List;
 
 public class FragmentHome extends Fragment {
     View view;
@@ -45,7 +42,6 @@ public class FragmentHome extends Fragment {
         HAdapter = new AdapterHome(getContext(), listHome);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(HAdapter);
-
         return view;
     }
 
@@ -53,15 +49,13 @@ public class FragmentHome extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
-
-        button = view.findViewById(R.id.button_reload);
+        /*button = findViewById(R.id.button_reload);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 new getJson(getActivity()).execute();
             }
-        });
+        });*/
 
         new getJson(getActivity()).execute();
     }

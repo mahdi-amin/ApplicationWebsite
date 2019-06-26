@@ -7,8 +7,6 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 import android.widget.FrameLayout;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -21,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     FragmentHome fragmentHome;
     FragmentAdd fragmentAdd;
     FragmentMe fragmentMe;
-    detailHome detailHome;
+    FragmentDetail FragmentDetail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         fragmentCategory = new FragmentCategory();
         fragmentHome = new FragmentHome();
         fragmentMe = new FragmentMe();
-        detailHome = new detailHome();
+        FragmentDetail = new FragmentDetail();
         bottomNavigationView.setSelectedItemId(R.id.item_Home);
 
         setFragment(fragmentHome);
@@ -46,14 +44,13 @@ public class MainActivity extends AppCompatActivity {
                         setFragment(fragmentCategory);
                         return true;
                     case R.id.item_add:
-                        setFragment(detailHome);
+                        setFragment(FragmentDetail);
                         return true;
                     case R.id.item_Home:
                         setFragment(fragmentHome);
                         return true;
                     case R.id.item_Me:
                         setFragment(fragmentMe);
-
                         return true;
 
                 }

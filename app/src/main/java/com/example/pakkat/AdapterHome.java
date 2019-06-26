@@ -5,14 +5,12 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
@@ -24,7 +22,7 @@ public class AdapterHome extends RecyclerView.Adapter<AdapterHome.MyViewHolder> 
     Context mContext;
     List<ModelHome> mHome;
     Dialog dialog;
-    detailHome detailHome = new detailHome();
+    FragmentDetail FragmentDetail = new FragmentDetail();
 
     public AdapterHome(Context mContext, List<ModelHome> mHome) {
 
@@ -34,29 +32,25 @@ public class AdapterHome extends RecyclerView.Adapter<AdapterHome.MyViewHolder> 
 
     @NonNull
     @Override
-    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public MyViewHolder onCreateViewHolder(@NonNull final ViewGroup parent, int viewType) {
 
         //set View For ViewHolder
         View view = LayoutInflater.from(mContext).inflate(R.layout.item_home, parent,false);
         final MyViewHolder viewHolder = new MyViewHolder(view);
 
-        dialog = new Dialog(mContext);
-        dialog.setContentView(R.layout.detail_home);
-        dialog.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT,
-                WindowManager.LayoutParams.MATCH_PARENT);
-
         viewHolder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                TextView detailTitle = dialog.findViewById(R.id.detail_title);
-                TextView detailTime = dialog.findViewById(R.id.detail_time);
-                TextView detailCategory = dialog.findViewById(R.id.detail_category);
-                TextView detailLoc = dialog.findViewById(R.id.detail_loc);
-                TextView detailPrice = dialog.findViewById(R.id.detail_price);
-                TextView detaildesc = dialog.findViewById(R.id.detail_description);
-                TextView titlebar = dialog.findViewById(R.id.title_bar);
-                ImageView detailImg = dialog.findViewById(R.id.detail_img);
+                view = LayoutInflater.from(mContext).inflate(R.layout.detail_home, parent,false);
+                TextView detailTitle = view.findViewById(R.id.detail_title);
+                TextView detailTime = view.findViewById(R.id.detail_time);
+                TextView detailCategory = view.findViewById(R.id.detail_category);
+                TextView detailLoc = view.findViewById(R.id.detail_loc);
+                TextView detailPrice = view.findViewById(R.id.detail_price);
+                TextView detaildesc = view.findViewById(R.id.detail_description);
+                TextView titlebar = view.findViewById(R.id.title_bar);
+                ImageView detailImg = view.findViewById(R.id.detail_img);
 
                 detailTitle.setText(mHome.get(viewHolder.getAdapterPosition()).getTitle());
                 titlebar.setText(mHome.get(viewHolder.getAdapterPosition()).getTitle());
@@ -67,12 +61,8 @@ public class AdapterHome extends RecyclerView.Adapter<AdapterHome.MyViewHolder> 
                 detaildesc.setText(mHome.get(viewHolder.getAdapterPosition()).getTxt());
                 Picasso.get().load(mHome.get(viewHolder.getAdapterPosition()).getPic()).into(detailImg);
 
-                //dialog.show();
-
-
-
                 AppCompatActivity activity = (AppCompatActivity) view.getContext();
-                activity.getSupportFragmentManager().beginTransaction().replace(R.id.Framely ,detailHome)
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.Framely , FragmentDetail)
                         .addToBackStack(null).commit();
             }
         });

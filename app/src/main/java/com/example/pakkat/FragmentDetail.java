@@ -8,11 +8,13 @@ import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-public class detailHome extends Fragment {
+public class FragmentDetail extends Fragment {
 
-    public detailHome() {
+    FragmentHome fragmentHome;
+    public FragmentDetail() {
     }
 
     @Nullable
@@ -21,7 +23,17 @@ public class detailHome extends Fragment {
 
         View view = inflater.inflate(R.layout.detail_home,container,false);
 
+        fragmentHome = new FragmentHome();
         Button btn =  view.findViewById(R.id.button_back);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.Framely ,fragmentHome)
+                        .addToBackStack(null).commit();
+            }
+        });
+
         return view;
     }
 }
