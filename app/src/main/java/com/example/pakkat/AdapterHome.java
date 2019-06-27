@@ -40,7 +40,7 @@ public class AdapterHome extends RecyclerView.Adapter<AdapterHome.MyViewHolder> 
             @Override
             public void onClick(View v) {
 
-                String[] data = new String[7];
+                String[] data = new String[9];
 
                 data[0] = mHome.get(viewHolder.getAdapterPosition()).getTitle();
                 data[1] = mHome.get(viewHolder.getAdapterPosition()).getDate();
@@ -49,6 +49,8 @@ public class AdapterHome extends RecyclerView.Adapter<AdapterHome.MyViewHolder> 
                 data[4] = mHome.get(viewHolder.getAdapterPosition()).getPrice();
                 data[5] = mHome.get(viewHolder.getAdapterPosition()).getDescription();
                 data[6] = mHome.get(viewHolder.getAdapterPosition()).getPic();
+                data[7] = mHome.get(viewHolder.getAdapterPosition()).getPhone();
+                data[8] = mHome.get(viewHolder.getAdapterPosition()).getLink();
 
                 FragmentDetail.setDetail(data);
                 AppCompatActivity activity = (AppCompatActivity) v.getContext();

@@ -25,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorPrimary"
                 android:text="عنوان"
-                android:textSize="30sp"
+                android:textSize="25sp"
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="15dp"
                 android:layout_weight="1.8"
@@ -44,12 +44,10 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="350dp"
+                android:layout_height="410dp"
                 android:layout_gravity="center"
                 android:src="@drawable/ic_launcher_background"
-                android:id="@+id/detail_img"
-                android:layout_marginBottom="15dp"
-                android:layout_marginTop="15dp"/>
+                android:id="@+id/detail_img"/>
 
             <View
                 android:layout_width="match_parent"
@@ -60,7 +58,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="عنوان"
-                android:textSize="35sp"
+                android:textSize="25sp"
                 android:textStyle="bold"
                 android:textColor="#000"
                 android:layout_gravity="right"
@@ -71,12 +69,48 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ساعت"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 android:textColor="#000"
                 android:layout_gravity="right"
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="20dp"
                 android:id="@+id/detail_time"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#B1B1B1"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="right"
+                android:weightSum="2"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="15sp"
+                    android:textColor="#000"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/link_web"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="لینک سایت"
+                    android:textSize="15sp"
+                    android:textColor="#000"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:gravity="right"/>
+            </LinearLayout>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
@@ -93,7 +127,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="دسته بندی"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     android:textColor="#000"
                     android:layout_gravity="right"
                     android:layout_marginRight="10dp"
@@ -105,7 +139,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="دسته بندی"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     android:textColor="#000"
                     android:layout_gravity="right"
                     android:layout_marginRight="10dp"
@@ -129,7 +163,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="محل"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     android:textColor="#000"
                     android:layout_gravity="right"
                     android:layout_marginRight="10dp"
@@ -141,7 +175,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="محل"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     android:textColor="#000"
                     android:layout_gravity="right"
                     android:layout_marginRight="10dp"
@@ -163,7 +197,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="قیمت"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     android:textColor="#000"
                     android:layout_gravity="right"
                     android:layout_marginRight="10dp"
@@ -175,7 +209,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="قیمت"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     android:textColor="#000"
                     android:layout_gravity="right"
                     android:layout_marginRight="10dp"
@@ -191,7 +225,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="متن"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 android:textColor="#000"
                 android:layout_gravity="right"
                 android:layout_marginRight="10dp"
@@ -210,6 +244,6 @@
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:textColor="#FFF"
-        />
+        android:id="@+id/button_call"/>
 
 </LinearLayout>

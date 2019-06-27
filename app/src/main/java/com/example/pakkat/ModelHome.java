@@ -10,6 +10,7 @@ public class ModelHome {
     private String Category;
     private String description;
     private String phone;
+    private String link;
 
     //Constructor null
     public ModelHome() {
@@ -17,7 +18,7 @@ public class ModelHome {
     }
 
     //Constructor
-    public ModelHome(String title, String loc, String date, String price, String pic, String category, String description, String phone) {
+    public ModelHome(String title, String loc, String date, String price, String pic, String category, String description, String phone, String link) {
         this.Title = title;
         this.Loc = loc;
         this.Date = date;
@@ -26,6 +27,7 @@ public class ModelHome {
         this.Category = category;
         this.description = description;
         this.phone = phone;
+        this.link = link;
     }
 
     //getter and setter
@@ -92,5 +94,13 @@ public class ModelHome {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
     }
 }

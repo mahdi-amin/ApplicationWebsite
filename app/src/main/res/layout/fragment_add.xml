@@ -3,5 +3,17 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:text="درج آگهی"
+                android:textSize="25sp"
+                android:padding="10dp"
+                android:layout_gravity="right"/>
+    </com.google.android.material.appbar.AppBarLayout>
 </LinearLayout>

@@ -42,20 +42,20 @@ public class FragmentHome extends Fragment {
         HAdapter = new AdapterHome(getContext(), listHome);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(HAdapter);
+
+        button = view.findViewById(R.id.button_reload);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new getJson(getActivity()).execute();
+            }
+        });
         return view;
     }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        /*button = findViewById(R.id.button_reload);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                new getJson(getActivity()).execute();
-            }
-        });*/
 
         new getJson(getActivity()).execute();
     }
@@ -112,8 +112,9 @@ public class FragmentHome extends Fragment {
                     String category = pakkatobj.getString("category");
                     String description = pakkatobj.getString("txt");
                     String phone = pakkatobj.getString("phone");
+                    String link = pakkatobj.getString("link");
 
-                    listHome.add(new ModelHome(title,loc,date,price,img,category,description,phone));
+                    listHome.add(new ModelHome(title,loc,date,price,img,category,description,phone,link));
                 }
                 HAdapter.notifyDataSetChanged();
 
@@ -125,4 +126,5 @@ public class FragmentHome extends Fragment {
             }
         }
     }
+
 }
