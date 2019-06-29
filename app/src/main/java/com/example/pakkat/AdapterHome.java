@@ -40,7 +40,7 @@ public class AdapterHome extends RecyclerView.Adapter<AdapterHome.MyViewHolder> 
             @Override
             public void onClick(View v) {
 
-                String[] data = new String[9];
+                String[] data = new String[12];
 
                 data[0] = mHome.get(viewHolder.getAdapterPosition()).getTitle();
                 data[1] = mHome.get(viewHolder.getAdapterPosition()).getDate();
@@ -48,9 +48,12 @@ public class AdapterHome extends RecyclerView.Adapter<AdapterHome.MyViewHolder> 
                 data[3] = mHome.get(viewHolder.getAdapterPosition()).getLoc();
                 data[4] = mHome.get(viewHolder.getAdapterPosition()).getPrice();
                 data[5] = mHome.get(viewHolder.getAdapterPosition()).getDescription();
-                data[6] = mHome.get(viewHolder.getAdapterPosition()).getPic();
-                data[7] = mHome.get(viewHolder.getAdapterPosition()).getPhone();
-                data[8] = mHome.get(viewHolder.getAdapterPosition()).getLink();
+                data[6] = mHome.get(viewHolder.getAdapterPosition()).getImg1();
+                data[7] = mHome.get(viewHolder.getAdapterPosition()).getImg2();
+                data[8] = mHome.get(viewHolder.getAdapterPosition()).getImg3();
+                data[9] = mHome.get(viewHolder.getAdapterPosition()).getImg4();
+                data[10] = mHome.get(viewHolder.getAdapterPosition()).getPhone();
+                data[11] = mHome.get(viewHolder.getAdapterPosition()).getLink();
 
                 FragmentDetail.setDetail(data);
                 AppCompatActivity activity = (AppCompatActivity) v.getContext();
@@ -70,7 +73,7 @@ public class AdapterHome extends RecyclerView.Adapter<AdapterHome.MyViewHolder> 
         holder.locTX.setText(mHome.get(position).getLoc());
         holder.dateTX.setText(mHome.get(position).getDate());
         holder.priceTX.setText(mHome.get(position).getPrice());
-        Picasso.get().load(mHome.get(position).getPic()).into(holder.iconIMG);
+        Picasso.get().load(mHome.get(position).getImg1()).into(holder.iconIMG);
 
     }
 

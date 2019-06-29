@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#fff"
     android:orientation="vertical"
     android:weightSum="1"
@@ -42,13 +42,13 @@
             android:layout_height="wrap_content"
             android:id="@+id/detail_homely">
 
-            <ImageView
+            <com.synnapps.carouselview.CarouselView
                 android:layout_width="match_parent"
                 android:layout_height="410dp"
-                android:layout_gravity="center"
-                android:src="@drawable/ic_launcher_background"
-                android:id="@+id/detail_img"/>
-
+                android:id="@+id/carouselview"
+                app:strokeColor="#000"
+                app:strokeWidth="1dp"
+                app:slideInterval="0"/>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"

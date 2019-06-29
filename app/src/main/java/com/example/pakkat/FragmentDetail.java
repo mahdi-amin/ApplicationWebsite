@@ -23,14 +23,15 @@ import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 
 import com.squareup.picasso.Picasso;
+import com.synnapps.carouselview.CarouselView;
+import com.synnapps.carouselview.ImageListener;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class FragmentDetail extends Fragment {
 
-    String[] detail = new String[8];
-
+    String[] detail = new String[12];
     public void setDetail(String[] detail) {
         this.detail = detail;
     }
@@ -52,7 +53,7 @@ public class FragmentDetail extends Fragment {
         TextView priceTX = view.findViewById(R.id.detail_price);
         TextView descriptionTX = view.findViewById(R.id.detail_description);
         TextView linkTX = view.findViewById(R.id.link_web);
-        ImageView img = view.findViewById(R.id.detail_img);
+        CarouselView carouselVeiw = view.findViewById(R.id.carouselview);
         Button callbtn = view.findViewById(R.id.button_call);
 
         titlebar.setText(detail[0]);
@@ -62,9 +63,16 @@ public class FragmentDetail extends Fragment {
         locTX.setText(detail[3]);
         priceTX.setText(detail[4]);
         descriptionTX.setText(detail[5]);
-        Picasso.get().load(detail[6]).into(img);
+        int length = 0;
+        for(int i=6;i<=9;i++){
+            if(detail[i] != "null"){
+                length++;
+            }
+        }
+        carouselVeiw.setPageCount(length);
+        carouselVeiw.setImageListener(imageListener);
 
-        Spanned Text = Html.fromHtml("<a href='https:/"+detail[8]+"'>"+detail[8]+"</a>");
+        Spanned Text = Html.fromHtml("<a href='https:/"+detail[11]+"'>"+detail[11]+"</a>");
         linkTX.setMovementMethod(LinkMovementMethod.getInstance());
         linkTX.setText(Text);
 
@@ -80,7 +88,7 @@ public class FragmentDetail extends Fragment {
                             1);
                 } else {
                     Intent callIntent = new Intent(Intent.ACTION_CALL);
-                    String number = detail[7];
+                    String number = detail[10];
                     callIntent.setData(Uri.parse("tel: " + number));
                     startActivity(callIntent);
                 }
@@ -89,4 +97,11 @@ public class FragmentDetail extends Fragment {
 
         return view;
     }
+
+    ImageListener imageListener = new ImageListener() {
+        @Override
+        public void setImageForPosition(int position, ImageView imageView) {
+            Picasso.get().load(detail[(position+6)]).into(imageView);
+        }
+    };
 }

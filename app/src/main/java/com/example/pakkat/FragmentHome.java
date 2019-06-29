@@ -102,19 +102,40 @@ public class FragmentHome extends Fragment {
                 }
                 for (int i = 0; i<pakkat.length(); i++){
 
+                    String img1 = null, img2 = null, img3 = null, img4 = null;
+
                     JSONObject pakkatobj = pakkat.getJSONObject(i);
 
                     String title = pakkatobj.getString("title");
                     String loc = pakkatobj.getString("loc");
                     String date = pakkatobj.getString("date");
                     String price = pakkatobj.getString("price");
-                    String img = pakkatobj.getString("img");
+                    if(pakkatobj.isNull("img1")){
+                        img1 = "null";
+                    }else {
+                        img1 = pakkatobj.getString("img1");
+                    }
+                    if(pakkatobj.isNull("img2")){
+                        img2 = "null";
+                    }else {
+                        img2 = pakkatobj.getString("img2");
+                    }
+                    if(pakkatobj.isNull("img3")){
+                        img3 = "null";
+                    }else {
+                        img3 = pakkatobj.getString("img3");
+                    }
+                    if(pakkatobj.isNull("img4")){
+                        img4 = "null";
+                    }else {
+                        img4 = pakkatobj.getString("img4");
+                    }
                     String category = pakkatobj.getString("category");
                     String description = pakkatobj.getString("txt");
                     String phone = pakkatobj.getString("phone");
                     String link = pakkatobj.getString("link");
 
-                    listHome.add(new ModelHome(title,loc,date,price,img,category,description,phone,link));
+                    listHome.add(new ModelHome(title,loc,date,price,img1,img2,img3,img4,category,description,phone,link));
                 }
                 HAdapter.notifyDataSetChanged();
 
