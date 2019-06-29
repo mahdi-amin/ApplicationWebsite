@@ -67,8 +67,7 @@ public class AdapterHome extends RecyclerView.Adapter<AdapterHome.MyViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-
-
+        
         holder.titleTX.setText(mHome.get(position).getTitle());
         holder.locTX.setText(mHome.get(position).getLoc());
         holder.dateTX.setText(mHome.get(position).getDate());

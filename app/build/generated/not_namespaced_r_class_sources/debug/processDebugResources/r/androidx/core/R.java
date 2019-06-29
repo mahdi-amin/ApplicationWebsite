@@ -133,18 +133,18 @@ public final class R {
         public static final int notification_main_column_container = 0x7f0900af;
         public static final int right_icon = 0x7f0900be;
         public static final int right_side = 0x7f0900bf;
-        public static final int tag_accessibility_actions = 0x7f0900ec;
-        public static final int tag_accessibility_clickable_spans = 0x7f0900ed;
-        public static final int tag_accessibility_heading = 0x7f0900ee;
-        public static final int tag_accessibility_pane_title = 0x7f0900ef;
-        public static final int tag_screen_reader_focusable = 0x7f0900f0;
-        public static final int tag_transition_group = 0x7f0900f1;
-        public static final int tag_unhandled_key_event_manager = 0x7f0900f2;
-        public static final int tag_unhandled_key_listeners = 0x7f0900f3;
-        public static final int text = 0x7f0900f4;
-        public static final int text2 = 0x7f0900f5;
-        public static final int time = 0x7f0900fd;
-        public static final int title = 0x7f0900fe;
+        public static final int tag_accessibility_actions = 0x7f0900ed;
+        public static final int tag_accessibility_clickable_spans = 0x7f0900ee;
+        public static final int tag_accessibility_heading = 0x7f0900ef;
+        public static final int tag_accessibility_pane_title = 0x7f0900f0;
+        public static final int tag_screen_reader_focusable = 0x7f0900f1;
+        public static final int tag_transition_group = 0x7f0900f2;
+        public static final int tag_unhandled_key_event_manager = 0x7f0900f3;
+        public static final int tag_unhandled_key_listeners = 0x7f0900f4;
+        public static final int text = 0x7f0900f5;
+        public static final int text2 = 0x7f0900f6;
+        public static final int time = 0x7f0900fe;
+        public static final int title = 0x7f0900ff;
     }
     public static final class integer {
         private integer() {}

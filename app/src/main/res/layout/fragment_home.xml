@@ -25,20 +25,32 @@
                 android:layout_gravity="left|center"
                 android:layout_marginLeft="5dp"
                 android:layout_weight="0.1"/>
-            <TextView
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:hint="جستجو آگهی"
+                android:layout_weight="1.9"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/search_txt"
+                android:inputType="text"/>
+
+            <!--<TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorPrimary"
                 android:text="پاکت"
                 android:textSize="25sp"
                 android:padding="10dp"
-                android:layout_weight="1.9"/>
+                android:layout_weight="1.8"/>-->
+
         </LinearLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/HomeRC_id"
-        android:background="#B1B1B1"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/HomeRC_id"
+            android:background="#B1B1B1"/>
+
 </LinearLayout>

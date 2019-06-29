@@ -4,11 +4,15 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -28,6 +32,7 @@ public class FragmentHome extends Fragment {
     ArrayList<ModelHome> listHome = new ArrayList<>();
     AdapterHome HAdapter;
     Button button;
+    String search_txt;
 
     public FragmentHome() {
 
@@ -50,6 +55,23 @@ public class FragmentHome extends Fragment {
                 new getJson(getActivity()).execute();
             }
         });
+
+        final EditText searchfield = view.findViewById(R.id.search_txt);
+        searchfield.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View view, int keycode, KeyEvent keyEvent) {
+
+                if(keyEvent.getAction() == KeyEvent.ACTION_DOWN){
+
+                    if(keycode == KeyEvent.KEYCODE_ENTER){
+                        search_txt = searchfield.getText().toString();
+                        new getJson(getActivity()).execute();
+                        return true;
+                    }
+                }
+                return false;
+            }
+        });
         return view;
     }
 
@@ -62,21 +84,20 @@ public class FragmentHome extends Fragment {
 
     public class getJson extends AsyncTask<Void,Void,String>{
 
+
         ProgressDialog progressDialog = new ProgressDialog(getActivity());
         Context context;
         public getJson(Context context) {
             this.context = context;
         }
 
-
-
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
 
-            progressDialog.setMessage("در حال بروزرسانی...");
-            progressDialog.setCancelable(false);
-            progressDialog.show();
+                progressDialog.setMessage("در حال بروزرسانی...");
+                progressDialog.setCancelable(false);
+                progressDialog.show();
         }
 
         @Override
@@ -86,13 +107,12 @@ public class FragmentHome extends Fragment {
         }
 
         @Override
-        protected void onPostExecute(String s) {
+        protected void onPostExecute(final String s) {
             super.onPostExecute(s);
 
             if (progressDialog.isShowing()){
                 progressDialog.dismiss();
             }
-
             try {
                 JSONObject object = new JSONObject(s);
 
@@ -135,8 +155,17 @@ public class FragmentHome extends Fragment {
                     String phone = pakkatobj.getString("phone");
                     String link = pakkatobj.getString("link");
 
-                    listHome.add(new ModelHome(title,loc,date,price,img1,img2,img3,img4,category,description,phone,link));
+                    if(search_txt == null){
+
+                        listHome.add(new ModelHome(title,loc,date,price,img1,img2,img3,img4,category,description,phone,link));
+                    }else{
+
+                        if(title.contains(search_txt)){
+                            listHome.add(new ModelHome(title,loc,date,price,img1,img2,img3,img4,category,description,phone,link));
+                        }
+                    }
                 }
+                search_txt = null;
                 HAdapter.notifyDataSetChanged();
 
 
@@ -146,6 +175,7 @@ public class FragmentHome extends Fragment {
                 Log.e("log",e.getMessage());
             }
         }
+
     }
 
 }
