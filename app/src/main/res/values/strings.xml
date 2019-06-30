@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">پاکت</string>
+
+    <string-array name="category">
+        <item>انتخاب دسته بندی</item>
+        <item>موبایل</item>
+        <item>کامپیوتر</item>
+        <item>لوازم منزل</item>
+        <item>وسایل نقلیه</item>
+        <item>لوازم تحریر</item>
+    </string-array>
+
+    <string-array name="loc">
+        <item>انتخاب محل آگهی</item>
+        <item>صادقیه</item>
+        <item>عباس آباد</item>
+        <item>تجریش</item>
+        <item>اکباتان</item>
+        <item>پونک</item>
+    </string-array>
 </resources>
