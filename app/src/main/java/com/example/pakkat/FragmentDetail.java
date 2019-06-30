@@ -35,6 +35,11 @@ public class FragmentDetail extends Fragment {
     public void setDetail(String[] detail) {
         this.detail = detail;
     }
+    String[] img;
+
+    public void setImg(String[] img) {
+        this.img = img;
+    }
 
     public FragmentDetail() {
     }
@@ -63,13 +68,7 @@ public class FragmentDetail extends Fragment {
         locTX.setText(detail[3]);
         priceTX.setText(detail[4]);
         descriptionTX.setText(detail[5]);
-        int length = 0;
-        for(int i=6;i<=9;i++){
-            if(detail[i] != "null"){
-                length++;
-            }
-        }
-        carouselVeiw.setPageCount(length);
+        carouselVeiw.setPageCount(img.length);
         carouselVeiw.setImageListener(imageListener);
 
         Spanned Text = Html.fromHtml("<a href='https:/"+detail[11]+"'>"+detail[11]+"</a>");
@@ -101,7 +100,7 @@ public class FragmentDetail extends Fragment {
     ImageListener imageListener = new ImageListener() {
         @Override
         public void setImageForPosition(int position, ImageView imageView) {
-            Picasso.get().load(detail[(position+6)]).into(imageView);
+            Picasso.get().load(img[position]).into(imageView);
         }
     };
 }

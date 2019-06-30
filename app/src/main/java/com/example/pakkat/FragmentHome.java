@@ -122,34 +122,18 @@ public class FragmentHome extends Fragment {
                 }
                 for (int i = 0; i<pakkat.length(); i++){
 
-                    String img1 = null, img2 = null, img3 = null, img4 = null;
-
                     JSONObject pakkatobj = pakkat.getJSONObject(i);
 
                     String title = pakkatobj.getString("title");
                     String loc = pakkatobj.getString("loc");
                     String date = pakkatobj.getString("date");
                     String price = pakkatobj.getString("price");
-                    if(pakkatobj.isNull("img1")){
-                        img1 = "null";
-                    }else {
-                        img1 = pakkatobj.getString("img1");
+                    JSONArray image = pakkatobj.getJSONArray("img");
+                    String[] img = new String[image.length()];
+                    for(int j=0;j<image.length();j++){
+                        img[j] = image.optString(j);
                     }
-                    if(pakkatobj.isNull("img2")){
-                        img2 = "null";
-                    }else {
-                        img2 = pakkatobj.getString("img2");
-                    }
-                    if(pakkatobj.isNull("img3")){
-                        img3 = "null";
-                    }else {
-                        img3 = pakkatobj.getString("img3");
-                    }
-                    if(pakkatobj.isNull("img4")){
-                        img4 = "null";
-                    }else {
-                        img4 = pakkatobj.getString("img4");
-                    }
+
                     String category = pakkatobj.getString("category");
                     String description = pakkatobj.getString("txt");
                     String phone = pakkatobj.getString("phone");
@@ -157,11 +141,11 @@ public class FragmentHome extends Fragment {
 
                     if(search_txt == null){
 
-                        listHome.add(new ModelHome(title,loc,date,price,img1,img2,img3,img4,category,description,phone,link));
+                        listHome.add(new ModelHome(title,loc,date,price,img,category,description,phone,link));
                     }else{
 
                         if(title.contains(search_txt)){
-                            listHome.add(new ModelHome(title,loc,date,price,img1,img2,img3,img4,category,description,phone,link));
+                            listHome.add(new ModelHome(title,loc,date,price,img,category,description,phone,link));
                         }
                     }
                 }

@@ -6,10 +6,7 @@ public class ModelHome {
     private String Loc;
     private String Date;
     private String price;
-    private String img1;
-    private String img2;
-    private String img3;
-    private String img4;
+    private String[] img;
     private String Category;
     private String description;
     private String phone;
@@ -21,15 +18,12 @@ public class ModelHome {
     }
 
     //Constructor
-    public ModelHome(String title, String loc, String date, String price, String img1, String img2, String img3, String img4, String category, String description, String phone, String link) {
+    public ModelHome(String title, String loc, String date, String price, String[] img, String category, String description, String phone, String link) {
         this.Title = title;
         this.Loc = loc;
         this.Date = date;
         this.price = price;
-        this.img1 = img1;
-        this.img2 = img2;
-        this.img3 = img3;
-        this.img4 = img4;
+        this.img = img;
         this.Category = category;
         this.description = description;
         this.phone = phone;
@@ -70,12 +64,12 @@ public class ModelHome {
         this.price = price;
     }
 
-    public String getImg1() {
-        return img1;
+    public String[] getImg() {
+        return img;
     }
 
-    public void setImg1(String img1) {
-        this.img1 = img1;
+    public void setImg(String[] img) {
+        this.img = img;
     }
 
     public String getCategory() {
@@ -110,27 +104,4 @@ public class ModelHome {
         this.link = link;
     }
 
-    public String getImg2() {
-        return img2;
-    }
-
-    public void setImg2(String img2) {
-        this.img2 = img2;
-    }
-
-    public String getImg3() {
-        return img3;
-    }
-
-    public void setImg3(String img3) {
-        this.img3 = img3;
-    }
-
-    public String getImg4() {
-        return img4;
-    }
-
-    public void setImg4(String img4) {
-        this.img4 = img4;
-    }
 }

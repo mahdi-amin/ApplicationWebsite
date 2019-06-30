@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/amir/StudioProjects/pakkat/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml",
+            "outputFile": "/home/amirhossein/AndroidStudioProjects/pakkat/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml",
             "map": [
                 {
-                    "source": "/home/amir/.gradle/caches/transforms-2/files-2.1/a3111fbc790e1ae460bd42bf99b9860f/res/values-hdpi-v4/values-hdpi-v4.xml",
+                    "source": "/home/amirhossein/.gradle/caches/transforms-2/files-2.1/ca875253c80611626113e5044bad848b/res/values-hdpi-v4/values-hdpi-v4.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
