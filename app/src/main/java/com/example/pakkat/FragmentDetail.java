@@ -31,7 +31,7 @@ import java.util.List;
 
 public class FragmentDetail extends Fragment {
 
-    String[] detail = new String[12];
+    String[] detail = new String[8];
     public void setDetail(String[] detail) {
         this.detail = detail;
     }
@@ -71,7 +71,7 @@ public class FragmentDetail extends Fragment {
         carouselVeiw.setPageCount(img.length);
         carouselVeiw.setImageListener(imageListener);
 
-        Spanned Text = Html.fromHtml("<a href='https:/"+detail[11]+"'>"+detail[11]+"</a>");
+        Spanned Text = Html.fromHtml("<a href='https:/"+detail[7]+"'>"+detail[7]+"</a>");
         linkTX.setMovementMethod(LinkMovementMethod.getInstance());
         linkTX.setText(Text);
 
@@ -87,7 +87,7 @@ public class FragmentDetail extends Fragment {
                             1);
                 } else {
                     Intent callIntent = new Intent(Intent.ACTION_CALL);
-                    String number = detail[10];
+                    String number = detail[6];
                     callIntent.setData(Uri.parse("tel: " + number));
                     startActivity(callIntent);
                 }

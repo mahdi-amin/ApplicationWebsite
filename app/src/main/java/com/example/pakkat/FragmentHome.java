@@ -131,9 +131,8 @@ public class FragmentHome extends Fragment {
                     JSONArray image = pakkatobj.getJSONArray("img");
                     String[] img = new String[image.length()];
                     for(int j=0;j<image.length();j++){
-                        img[j] = image.optString(j);
+                        img[j] = image.getString(j);
                     }
-
                     String category = pakkatobj.getString("category");
                     String description = pakkatobj.getString("txt");
                     String phone = pakkatobj.getString("phone");
