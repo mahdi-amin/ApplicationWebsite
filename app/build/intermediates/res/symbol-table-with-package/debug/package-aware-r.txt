@@ -1108,6 +1108,7 @@ drawable notify_panel_notification_icon_bg
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 font bkoodakbold
+font iransansweb
 id ALT
 id CTRL
 id CategoryRC_id
