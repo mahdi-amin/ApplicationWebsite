@@ -1062,6 +1062,7 @@ drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable add
+drawable addimage
 drawable avd_hide_password
 drawable avd_show_password
 drawable back
@@ -1248,6 +1249,9 @@ id icon
 id icon_group
 id ifRoom
 id image
+id image_1
+id image_2
+id image_3
 id indicator
 id info
 id invisible
