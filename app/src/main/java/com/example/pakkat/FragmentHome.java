@@ -116,27 +116,27 @@ public class FragmentHome extends Fragment {
             try {
                 JSONObject object = new JSONObject(s);
 
-                JSONArray pakkat = object.getJSONArray("pakkat");
+                JSONArray Product_array = object.getJSONArray("pakkat");
                 if(listHome!=null && listHome.size()>0){
                     listHome.clear();
                 }
-                for (int i = 0; i<pakkat.length(); i++){
+                for (int i = 0; i<Product_array.length(); i++){
 
-                    JSONObject pakkatobj = pakkat.getJSONObject(i);
+                    JSONObject Product_item = Product_array.getJSONObject(i);
 
-                    String title = pakkatobj.getString("title");
-                    String loc = pakkatobj.getString("loc");
-                    String date = pakkatobj.getString("date");
-                    String price = pakkatobj.getString("price");
-                    JSONArray image = pakkatobj.getJSONArray("img");
+                    String title = Product_item.getString("title");
+                    String loc = Product_item.getString("loc");
+                    String date = Product_item.getString("date");
+                    String price = Product_item.getString("price");
+                    JSONArray image = Product_item.getJSONArray("img");
                     String[] img = new String[image.length()];
                     for(int j=0;j<image.length();j++){
                         img[j] = image.getString(j);
                     }
-                    String category = pakkatobj.getString("category");
-                    String description = pakkatobj.getString("txt");
-                    String phone = pakkatobj.getString("phone");
-                    String link = pakkatobj.getString("link");
+                    String category = Product_item.getString("category");
+                    String description = Product_item.getString("txt");
+                    String phone = Product_item.getString("phone");
+                    String link = Product_item.getString("link");
 
                     if(search_txt == null){
 

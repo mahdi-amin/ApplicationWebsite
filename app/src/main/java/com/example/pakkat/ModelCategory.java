@@ -9,6 +9,7 @@ public class ModelCategory {
 
     }
 
+
     //Constructor
     public ModelCategory(String title) {
         Title = title;

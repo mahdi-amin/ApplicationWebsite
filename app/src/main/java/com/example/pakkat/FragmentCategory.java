@@ -1,6 +1,9 @@
 package com.example.pakkat;
 
+import android.content.Context;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +13,10 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,19 +42,22 @@ public class FragmentCategory extends Fragment {
 
         return view;
     }
-
-    String url = "https://www.91-img.com/pictures/128557-v5-honor-9n-mobile-phone-large-1.jpg";
-
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        listcategory = new ArrayList<>();
-        listcategory.add(new ModelCategory("موبایل"));
-        listcategory.add(new ModelCategory("کامپیوتر"));
-        listcategory.add(new ModelCategory("تلویزیون"));
-        listcategory.add(new ModelCategory("سیستم"));
-        listcategory.add(new ModelCategory("بخاری"));
+        listcategory.add(new ModelCategory("اتوبوس"));
         listcategory.add(new ModelCategory("ماشین"));
+        listcategory.add(new ModelCategory("وسایل نقلیه"));
+        listcategory.add(new ModelCategory("فروش غذا"));
+        listcategory.add(new ModelCategory("حسابداری"));
+        listcategory.add(new ModelCategory("بازرگانی"));
+        listcategory.add(new ModelCategory("بازاریابی"));
+        listcategory.add(new ModelCategory("کاریابی"));
+        listcategory.add(new ModelCategory("استخدام"));
+        listcategory.add(new ModelCategory("لباسشویی"));
+        listcategory.add(new ModelCategory("یخچال"));
+        listcategory.add(new ModelCategory("کامپیوتر"));
+        listcategory.add(new ModelCategory("موبایل"));
     }
 }
