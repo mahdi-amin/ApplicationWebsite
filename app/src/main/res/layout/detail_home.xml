@@ -29,7 +29,8 @@
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="15dp"
                 android:layout_weight="1.8"
-                android:id="@+id/title_bar"/>
+                android:id="@+id/title_bar"
+                android:fontFamily="@font/vazir"/>
         </LinearLayout>
     </com.google.android.material.appbar.AppBarLayout>
     <ScrollView
@@ -64,7 +65,8 @@
                 android:layout_gravity="right"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
-                android:id="@+id/detail_title"/>
+                android:id="@+id/detail_title"
+                android:fontFamily="@font/vazir"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -74,7 +76,8 @@
                 android:layout_gravity="right"
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="20dp"
-                android:id="@+id/detail_time"/>
+                android:id="@+id/detail_time"
+                android:fontFamily="@font/vazir"/>
 
             <View
                 android:layout_width="match_parent"
@@ -99,7 +102,8 @@
                     android:layout_weight="1"
                     android:gravity="left"
                     android:layout_marginLeft="10dp"
-                    android:id="@+id/link_web"/>
+                    android:id="@+id/link_web"
+                    android:fontFamily="@font/vazir"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -109,7 +113,8 @@
                     android:layout_gravity="right"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:gravity="right"/>
+                    android:gravity="right"
+                    android:fontFamily="@font/vazir"/>
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
@@ -134,7 +139,8 @@
                     android:layout_weight="1"
                     android:gravity="left"
                     android:layout_marginLeft="10dp"
-                    android:id="@+id/detail_category"/>
+                    android:id="@+id/detail_category"
+                    android:fontFamily="@font/vazir"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -144,7 +150,8 @@
                     android:layout_gravity="right"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:gravity="right"/>
+                    android:gravity="right"
+                    android:fontFamily="@font/vazir"/>
             </LinearLayout>
 
             <View
@@ -170,7 +177,8 @@
                     android:layout_weight="1"
                     android:gravity="left"
                     android:layout_marginLeft="10dp"
-                    android:id="@+id/detail_loc"/>
+                    android:id="@+id/detail_loc"
+                    android:fontFamily="@font/vazir"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -180,7 +188,8 @@
                     android:layout_gravity="right"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:gravity="right"/>
+                    android:gravity="right"
+                    android:fontFamily="@font/vazir"/>
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
@@ -204,7 +213,8 @@
                     android:layout_weight="1"
                     android:gravity="left"
                     android:layout_marginLeft="10dp"
-                    android:id="@+id/detail_price"/>
+                    android:id="@+id/detail_price"
+                    android:fontFamily="@font/vazir"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -214,7 +224,8 @@
                     android:layout_gravity="right"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:gravity="right"/>
+                    android:gravity="right"
+                    android:fontFamily="@font/vazir"/>
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
@@ -231,7 +242,8 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="5dp"
-                android:id="@+id/detail_description"/>
+                android:id="@+id/detail_description"
+                android:fontFamily="@font/vazir"/>
         </LinearLayout>
     </ScrollView>
     <Button
@@ -244,6 +256,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:textColor="#FFF"
-        android:id="@+id/button_call"/>
+        android:id="@+id/button_call"
+        android:fontFamily="@font/vazir"/>
 
 </LinearLayout>

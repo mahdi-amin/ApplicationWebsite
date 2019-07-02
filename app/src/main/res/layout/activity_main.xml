@@ -21,6 +21,6 @@
         app:menu="@menu/menu"
         android:layout_weight="1"
         android:background="#fff"
-        />
+        android:fontFamily="@font/vazir"/>
 
 </LinearLayout>

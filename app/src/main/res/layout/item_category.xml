@@ -12,7 +12,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/ic_chevron_left_black_24dp"
+        android:src="@drawable/back"
         android:layout_weight="1.8"/>
 
     <TextView
@@ -23,7 +23,8 @@
         android:textColor="@color/TitleFragment"
         android:gravity="right"
         android:layout_weight="0.2"
-        android:id="@+id/title_category"/>
+        android:id="@+id/title_category"
+        android:fontFamily="@font/vazir"/>
 
 
 </LinearLayout>

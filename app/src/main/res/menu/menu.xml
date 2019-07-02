@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:icon="@drawable/ic_home_black_24dp"
+        android:icon="@drawable/user"
         android:title="پاکت من"
         android:id="@+id/item_Me" />
     <item
-        android:icon="@drawable/ic_subject_black_24dp"
+        android:icon="@drawable/list"
         android:title="دسته بندی"
         android:id="@+id/item_list"
         />
     <item
-        android:icon="@drawable/ic_add_circle_black_24dp"
+        android:icon="@drawable/add"
         android:title="اضافه کردن"
         android:id="@+id/item_add"/>
     <item
-        android:icon="@drawable/ic_home_black_24dp"
+        android:icon="@drawable/home"
         android:title="خانه"
         android:id="@+id/item_Home" />
 
