@@ -49,7 +49,6 @@ public class AdapterHome extends RecyclerView.Adapter<AdapterHome.MyViewHolder> 
                 data[3] = mHome.get(viewHolder.getAdapterPosition()).getLoc();
                 data[4] = mHome.get(viewHolder.getAdapterPosition()).getPrice();
                 data[5] = mHome.get(viewHolder.getAdapterPosition()).getDescription();
-                //data[6] = mHome.get(viewHolder.getAdapterPosition()).getImg();
                 data[6] = mHome.get(viewHolder.getAdapterPosition()).getPhone();
                 data[7] = mHome.get(viewHolder.getAdapterPosition()).getLink();
 

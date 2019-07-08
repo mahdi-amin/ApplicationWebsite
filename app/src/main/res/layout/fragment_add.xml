@@ -39,7 +39,8 @@
                     android:layout_height="120dp"
                     android:id="@+id/image-1"
                     android:src="@drawable/addimage"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"/>
                 <ImageView
                     android:layout_width="120dp"
                     android:layout_height="120dp"
@@ -53,7 +54,8 @@
                     android:id="@+id/image-3"
                     android:layout_marginLeft="25dp"
                     android:src="@drawable/addimage"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"/>
             </LinearLayout>
             <TextView
                 android:layout_width="wrap_content"

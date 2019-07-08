@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
     FragmentHome fragmentHome;
     FragmentAdd fragmentAdd;
     FragmentMe fragmentMe;
-    FragmentDetail FragmentDetail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

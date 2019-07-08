@@ -18,13 +18,14 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
 public class FragmentCategory extends Fragment {
     View view;
     private RecyclerView recyclerView;
-    private List<ModelCategory> listcategory;
+    ArrayList<ModelCategory> listcategory = new ArrayList<>();
 
     public FragmentCategory() {
 

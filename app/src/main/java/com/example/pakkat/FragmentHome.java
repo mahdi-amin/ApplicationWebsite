@@ -153,7 +153,7 @@ public class FragmentHome extends Fragment {
 
 
             }catch (JSONException e){
-                Toast.makeText(context, e.getMessage(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "مشکل در اتصال ...",Toast.LENGTH_SHORT).show();
             }catch (Exception e){
                 Log.e("log",e.getMessage());
             }
